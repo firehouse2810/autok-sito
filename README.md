@@ -10,3 +10,4 @@ Sito statico di AutOK (IT/EN), sulla struttura del sito di SalvadApp. Nessuna bu
 ## 02/11/2026
 - Tolte tutte le frasi su "un veicolo gratis, poi sblocchi" (badge, "Aggiungi la tua auto", sezione dedicata): ora "Gratuita, senza acquisti" (nella versione attuale).
 - I quattro PDF in `assets/` sono rigenerati dai testi di Privacy e Termini senza acquisti, con data 2 novembre 2026 ed email `sviluppo.app.am@gmail.com` (la stessa del sito).
+- Aggiunte due pagine web normali, `privacy.html` e `termini.html` (italiano e inglese, con il selettore IT/EN): Google Play non accetta un PDF come indirizzo delle norme sulla privacy. Indirizzo da dare a Play Console: `https://firehouse2810.github.io/autok-sito/privacy.html`. I PDF restano scaricabili dalla sezione Documenti.

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutOK — Termini e Condizioni / Terms and Conditions</title>
+<meta name="description" content="Termini e Condizioni d'Uso di AutOK. / AutOK Terms and Conditions of Use.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Palette AutOK: nero/argento con accento blu polvere, stessi valori di colors.xml
+       (black_1/2/3, silver, silver_dim, autok_blue) */
+    --black-1: #131316;
+    --black-2: #232327;
+    --black-3: #3A3A40;
+    --silver: #CFD1D8;
+    --silver-dim: #8C8E97;
+    --autok-blue: #7FA6BF;
+
+    --paper: var(--black-1);
+    --paper-raised: var(--black-2);
+    --ink: var(--silver);
+    --petrol: var(--autok-blue);
+    --brass: var(--autok-blue);
+    --crease: rgba(207,209,216,0.25);
+    --ink-soft: #B4B7C0;
+    --radius: 3px;
+    --max-w: 760px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Sottile texture, versione scura */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.02) 0, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.025) 0, transparent 45%);
+    z-index: 0;
+  }
+
+  .wrap {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 500;
+  }
+
+  /* ---------- Divisore firma ---------- */
+  .fold-divider {
+    position: relative;
+    height: 46px;
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+  .fold-divider::before {
+    content: "";
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 50%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--crease) 12%, var(--crease) 88%, transparent);
+  }
+  .fold-divider::after {
+    content: "";
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: calc(50% + 1px);
+    height: 6px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15), transparent);
+    filter: blur(1px);
+  }
+
+  /* ---------- Header / nav minima ---------- */
+  header {
+    padding: 28px 0 0;
+  }
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brandmark {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 26px;
+  }
+  .brandmark img { width: 44px; height: 44px; }
+
+  .lang-switch {
+    display: flex;
+    gap: 2px;
+  }
+  .lang-switch button {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--crease);
+    background: var(--paper-raised);
+    color: var(--ink-soft);
+    padding: 7px 11px 6px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .lang-switch button:first-child { border-radius: var(--radius) 0 0 var(--radius); }
+  .lang-switch button:last-child { border-radius: 0 var(--radius) var(--radius) 0; }
+  .lang-switch button + button { border-left: none; }
+  .lang-switch button[aria-pressed="true"] {
+    color: var(--paper-raised);
+    background: var(--ink);
+    border-color: var(--ink);
+    z-index: 1;
+  }
+  .lang-switch button:hover:not([aria-pressed="true"]) {
+    border-color: var(--petrol);
+    color: var(--petrol);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 64px 0 8px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(34px, 5.4vw, 50px);
+    line-height: 1.06;
+    margin: 14px 0 18px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--petrol);
+  }
+  .hero p.lede {
+    font-size: 17.5px;
+    color: var(--ink-soft);
+    max-width: 46ch;
+    margin: 0;
+  }
+  .hero-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .hero-art::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(127,166,191,0.22), transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-art img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    filter: drop-shadow(0 18px 26px rgba(0,0,0,0.35));
+  }
+
+  .badge-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+  }
+  .store-badge-row {
+    margin-top: 20px;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .store-badge-row img {
+    display: block;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.35));
+  }
+  .qr-code {
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    border: 1px solid var(--crease);
+  }
+  .badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    border: 1px solid var(--crease);
+    background: var(--paper-raised);
+    padding: 6px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--petrol);
+    display: inline-block;
+  }
+
+  /* ---------- Sezione "come funziona" ---------- */
+  section { padding: 8px 0 30px; }
+  section h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 26px;
+    margin: 4px 0 26px;
+  }
+
+  .steps {
+    display: grid;
+    gap: 0;
+    counter-reset: step;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-top: 1px solid var(--crease);
+  }
+  .step:last-child { border-bottom: 1px solid var(--crease); }
+  .step-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 26px;
+    color: var(--brass);
+    line-height: 1;
+    padding-top: 2px;
+  }
+  .step h3 {
+    margin: 0 0 4px;
+    font-size: 16.5px;
+    font-weight: 600;
+  }
+  .step p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+  }
+
+  /* ---------- Blocchi di funzione (testo semplice) ---------- */
+  .feature-block p {
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    max-width: 62ch;
+    margin: 0;
+  }
+  .feature-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 11px;
+  }
+  .feature-list li {
+    padding-left: 20px;
+    position: relative;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+  }
+  .feature-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--brass);
+  }
+
+  /* ---------- Documenti: card con angolo piegato ---------- */
+  .doc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .doc-card {
+    position: relative;
+    background: var(--paper-raised);
+    border: 1px solid var(--crease);
+    border-radius: var(--radius);
+    padding: 22px 20px 20px;
+    text-decoration: none;
+    color: var(--ink);
+    display: block;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .doc-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+  }
+  /* Angolo piegato — dog-ear, eco diretta dell'origami del logo */
+  .doc-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 22px 22px 0;
+    border-color: transparent var(--paper) transparent transparent;
+    filter: drop-shadow(-2px 2px 2px rgba(0,0,0,0.25));
+    transition: border-width 0.18s ease;
+  }
+  .doc-card:hover::after {
+    border-width: 0 28px 28px 0;
+  }
+  .doc-kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--petrol);
+    margin: 0 0 8px;
+  }
+  .doc-card h3 {
+    margin: 0 0 6px;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 18.5px;
+  }
+  .doc-card span.dl {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 30px 0 60px;
+  }
+  footer .foot-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  footer p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  footer a {
+    color: var(--petrol);
+    text-decoration: none;
+    border-bottom: 1px solid var(--crease);
+  }
+  footer a:hover { border-color: var(--petrol); }
+  .foot-mono {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--silver-dim);
+  }
+
+  [data-i18n] { display: none; }
+  [data-i18n].active { display: revert; }
+  /* .doc-card è un <a>: "revert" tornerebbe a inline, serve display:block esplicito */
+  .doc-card[data-i18n].active { display: block; }
+
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; padding-top: 40px; }
+    .hero-art { order: -1; }
+    .hero-art img { width: 128px; height: 128px; }
+    .hero-art::before { width: 160px; height: 160px; }
+    .doc-grid { grid-template-columns: 1fr; }
+    .nav-row { gap: 12px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .soon {
+    display: inline-block;
+    margin-top: 22px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: var(--petrol);
+    border: 1px dashed var(--petrol);
+    padding: 9px 14px;
+    border-radius: 3px;
+  }
+  .brandmark .wordmark { letter-spacing: 0.01em; }
+  .icona-app { width: 44px; height: 44px; border-radius: 22%; }
+  .icona-hero { border-radius: 22%; }
+
+  .legal { padding: 24px 0 48px; max-width: 760px; }
+  .legal h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 2rem; line-height: 1.2; margin: 16px 0 8px; }
+  .legal h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.35rem; margin: 32px 0 8px; }
+  .legal p, .legal li { color: var(--ink-soft); line-height: 1.7; }
+  .legal p { margin: 10px 0; }
+  .legal em { color: var(--silver-dim); }
+  .legal code { font-family: 'IBM Plex Mono', monospace; font-size: 0.9em; }
+  .legal a, .back a { color: var(--autok-blue); }
+  .back { margin-top: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="nav-row">
+      <div class="brandmark">
+        <img src="assets/favicon.png" alt="" class="icona-app">
+        <span class="wordmark">AutOK</span>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Lingua / Language">
+        <button data-set-lang="it" aria-pressed="true">IT</button>
+        <button data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+  <main class="legal">
+    <div data-i18n="it" class="active">
+<h1>Termini e Condizioni d'Uso — AO Autok</h1>
+<p><em>Ultimo aggiornamento: 2 novembre 2026</em></p>
+<p>Benvenuto su <strong>AO Autok</strong> (l'"Applicazione"). I presenti Termini e Condizioni d'Uso regolano il rapporto tra lo Sviluppatore di questa Applicazione (di seguito "lo Sviluppatore", "noi" o "nostro") e l'utente finale (di seguito "l'Utente" o "tu"). Scaricando, installando o utilizzando l'Applicazione, accetti integralmente i presenti Termini.</p>
+<h2>1. Condizioni d'Uso e Funzionalità</h2>
+<p>L'Applicazione fornisce un servizio di gestione e manutenzione di veicoli personali (gestione dati auto, promemoria di scadenze, notifiche, documenti e statistiche). L'Applicazione è progettata per funzionare interamente in modalità locale (offline) sul dispositivo dell'Utente ed è disponibile per dispositivi Android tramite Google Play Store.</p>
+<h2>2. Utilizzo da Parte di Minori</h2>
+<p>L'Applicazione presenta contenuti adatti a tutte le età (classificazione PEGI 3 / "Tutti"). Qualora l'Utente sia minorenne, ne consigliamo l'uso con il consenso e sotto la supervisione di un genitore o tutore legale.</p>
+<h2>3. Account Utente e Gestione Backup</h2>
+<p>L'Applicazione non prevede la creazione di un account utente sui sistemi dello Sviluppatore, né richiede credenziali di accesso.</p>
+<p>L'Applicazione genera automaticamente backup dei propri dati, salvati in locale nella cartella <code>Download/AutOK/</code> del dispositivo. Se l'Utente sceglie successivamente di copiare o caricare manualmente tale file su un servizio cloud di terze parti (ad esempio Google Drive), tale operazione avviene per iniziativa autonoma dell'Utente tramite gli strumenti nativi del proprio dispositivo. Lo Sviluppatore è completamente estraneo a tale processo, non ha accesso alle credenziali cloud dell'Utente e non gestisce, visualizza o conserva detti file di backup.</p>
+<h2>4. Gratuità dell'Applicazione</h2>
+<p>Nella versione attuale l'Applicazione è <strong>gratuita</strong>: non contiene acquisti in-app, abbonamenti né pubblicità, e non pone limiti al numero di veicoli che puoi gestire. Lo Sviluppatore si riserva il diritto di introdurre in futuro funzionalità, versioni o servizi a pagamento, che saranno sempre indicati chiaramente prima di qualsiasi acquisto. Lo Sviluppatore non raccoglie né processa dati bancari o carte di credito.</p>
+<h2>5. Proprietà Intellettuale</h2>
+<p>Tutti i diritti di proprietà intellettuale relativi all'Applicazione, inclusi a titolo esemplificativo ma non esaustivo il codice sorgente, la grafica, l'interfaccia utente, i loghi e i marchi, appartengono allo Sviluppatore. All'Utente viene concessa esclusivamente una licenza d'uso personale, limitata, non esclusiva, non trasferibile e revocabile per utilizzare l'Applicazione sui propri dispositivi personali. È severamente vietato decompilare, decodificare (reverse engineering) o duplicare l'Applicazione.</p>
+<h2>6. Limitazione di Responsabilità (Disclaimers)</h2>
+<p>L'Applicazione viene fornita "così com'è" (as is) e "come disponibile", nello stato in cui l'hai vista e scaricata, senza garanzia di assenza di errori o di idoneità a uno scopo particolare. Lo Sviluppatore declina ogni responsabilità per:</p>
+<ul>
+<li>Perdita di dati, veicoli, scadenze, documenti o informazioni inserite nell'app dovuta a malfunzionamenti del dispositivo, disinstallazione dell'app, formattazione o smarrimento del telefono. Essendo un'app offline, non esistono backup remoti sui server dello Sviluppatore: la conservazione dei propri dati è responsabilità esclusiva dell'Utente.</li>
+<li>Danni diretti o indiretti derivanti dal mancato funzionamento dell'app o da notifiche/promemoria non recapitati dal sistema operativo del dispositivo (ad esempio scadenze di bollo, revisione o manutenzione non notificate in tempo). L'Applicazione è uno strumento di supporto e non sostituisce la verifica autonoma da parte dell'Utente degli obblighi normativi relativi al proprio veicolo.</li>
+</ul>
+<h2>7. Obbligo di Indennizzo</h2>
+<p>L'Utente accetta di indennizzare, difendere e tenere indenne lo Sviluppatore, i suoi collaboratori e partner da qualsiasi pretesa, danno, costo, responsabilità o spesa (incluse le spese legali) derivanti da un uso improprio, illecito o non autorizzato dell'Applicazione da parte dell'Utente o dalla violazione dei presenti Termini.</p>
+<h2>8. Continuità del Servizio</h2>
+<p>AO Autok è sviluppata come progetto indipendente. Lo Sviluppatore non garantisce lo sviluppo di nuove funzionalità a tempo indeterminato e può, in qualsiasi momento e anche senza preavviso, modificare o sospendere l'Applicazione oppure ritirarla da Google Play Store. Eventuali funzionalità future che richiedano servizi o integrazioni esterne potranno essere offerte come prodotto separato. In caso di cessazione dello sviluppo o di ritiro dallo store, l'Applicazione già installata continuerà a funzionare regolarmente sul dispositivo di chi l'ha già scaricata, mantenendo le funzionalità disponibili.</p>
+<h2>9. Cessione dell'Applicazione</h2>
+<p>Lo Sviluppatore può cedere o trasferire l'Applicazione, i relativi diritti e i presenti Termini a un terzo (ad esempio ad AVLAM App). In tal caso il cessionario subentra come Sviluppatore, e l'Applicazione resta gratuita e invariata per l'Utente. L'eventuale cambio di Sviluppatore verrà reso noto con l'aggiornamento di questi Termini e dell'Informativa sulla Privacy.</p>
+<h2>10. Legge Applicabile e Controversie</h2>
+<p>I presenti Termini sono regolati e interpretati in conformità alla legge Italiana. Per qualsiasi controversia derivante dall'interpretazione o dall'esecuzione dei presenti Termini, sarà competente il Foro di residenza o domicilio dello Sviluppatore, fatti salvi i diritti inderogabili dei consumatori residenti nell'Unione Europea di agire dinanzi ai tribunali del proprio luogo di residenza.</p>
+    </div>
+    <div data-i18n="en">
+<h1>Terms and Conditions of Use — AO Autok</h1>
+<p><em>Last updated: 2 November 2026</em></p>
+<p>Welcome to <strong>AO Autok</strong> (the "Application"). These Terms and Conditions of Use govern the relationship between the Developer of this Application (hereinafter "the Developer", "we", or "our") and the end user (hereinafter "the User" or "you"). By downloading, installing, or using the Application, you fully accept these Terms.</p>
+<h2>1. Terms of Use and Functionality</h2>
+<p>The Application provides a personal vehicle management and maintenance service (vehicle data management, deadline reminders, notifications, documents, and statistics). The Application is designed to work entirely locally (offline) on the User's device and is available for Android devices through the Google Play Store.</p>
+<h2>2. Use by Minors</h2>
+<p>The Application features content suitable for all ages (PEGI 3 / "Everyone" rating). If the User is a minor, we recommend use with the consent and under the supervision of a parent or legal guardian.</p>
+<h2>3. User Account and Backup Management</h2>
+<p>The Application does not require the creation of a user account on the Developer's systems, nor does it require login credentials.</p>
+<p>The Application automatically generates backups of your data, saved locally in the device's <code>Download/AutOK/</code> folder. If the User subsequently chooses to manually copy or upload that file to a third-party cloud service (for example, Google Drive), you do so entirely on your own initiative, using your device's native tools. The Developer is entirely uninvolved in this process, has no access to your cloud credentials, and does not manage, view, or store such backup files.</p>
+<h2>4. Free of Charge</h2>
+<p>In its current version the Application is <strong>free of charge</strong>: it contains no in-app purchases, no subscriptions and no advertising, and places no limit on the number of vehicles you can manage. The Developer reserves the right to introduce paid features, versions or services in the future, which will always be clearly indicated before any purchase. The Developer does not collect or process bank or credit card data.</p>
+<h2>5. Intellectual Property</h2>
+<p>All intellectual property rights related to the Application, including but not limited to source code, graphics, user interface, logos, and trademarks, belong to the Developer. The User is granted only a personal, limited, non-exclusive, non-transferable, and revocable license to use the Application on their own personal devices. Decompiling, reverse engineering, or duplicating the Application is strictly prohibited.</p>
+<h2>6. Limitation of Liability (Disclaimers)</h2>
+<p>The Application is provided "as is" and "as available", in the state in which you saw and downloaded it, with no warranty that it is error-free or fit for a particular purpose. The Developer disclaims any liability for:</p>
+<ul>
+<li>Loss of data, vehicles, deadlines, documents, or information entered in the app due to device malfunction, uninstallation of the app, formatting, or loss of the phone. Being an offline app, there are no remote backups on the Developer's servers: preserving your own data is the User's sole responsibility.</li>
+<li>Direct or indirect damages arising from the app's malfunction or from notifications/reminders not delivered by the device's operating system (for example, road tax, inspection, or maintenance deadlines not notified in time). The Application is a support tool and does not replace the User's own independent verification of the regulatory obligations relating to their vehicle.</li>
+</ul>
+<h2>7. Indemnification</h2>
+<p>The User agrees to indemnify, defend, and hold harmless the Developer, its collaborators, and partners from any claim, damage, cost, liability, or expense (including legal fees) arising from improper, unlawful, or unauthorized use of the Application by the User, or from a breach of these Terms.</p>
+<h2>8. Service Continuity</h2>
+<p>AO Autok is developed as an independent project. The Developer does not guarantee indefinite development of new features and may, at any time and without notice, modify or suspend the Application or withdraw it from the Google Play Store. Any future features requiring external services or integrations may be offered as a separate product. Should development cease or the Application be withdrawn from the store, the Application already installed will continue to function normally on the devices of those who have already downloaded it, retaining its available features.</p>
+<h2>9. Assignment of the Application</h2>
+<p>The Developer may assign or transfer the Application, the related rights and these Terms to a third party (for example, AVLAM App). In that case the assignee takes over as Developer, and the Application remains free of charge and unchanged for the User. Any change of Developer will be communicated by updating these Terms and the Privacy Policy.</p>
+<h2>10. Governing Law and Disputes</h2>
+<p>These Terms are governed by and interpreted in accordance with Italian law. For any dispute arising from the interpretation or performance of these Terms, the competent court shall be that of the Developer's place of residence or domicile, without prejudice to the non-waivable rights of consumers residing in the European Union to bring proceedings before the courts of their own place of residence.</p>
+    </div>
+    <p class="back"><a href="index.html">&larr; AutOK</a></p>
+  </main>
+</div>
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    var elements = document.querySelectorAll('[data-i18n]');
+
+    function setLang(lang) {
+      elements.forEach(function (el) {
+        el.classList.toggle('active', el.getAttribute('data-i18n') === lang);
+      });
+      buttons.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+      });
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang);
+      try { localStorage.setItem('autok-lang', lang); } catch (e) {}
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setLang(btn.getAttribute('data-set-lang'));
+      });
+    });
+
+    var saved = null;
+    try { saved = localStorage.getItem('autok-lang'); } catch (e) {}
+    if (saved && ['it', 'en'].indexOf(saved) !== -1) {
+      setLang(saved);
+    }
+  })();
+</script>
+</body>
+</html>
